@@ -6,4 +6,4 @@ async def another_home() -> dict:
     return {"message": "Hello again, world!"}
 
 
-my_urls = [Gateway(handler=another_home)]
+my_urls = [Gateway(path="/route_list", handler=another_home)]
