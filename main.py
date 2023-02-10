@@ -11,9 +11,9 @@ async def homepage() -> dict:
 esmerald_app = Esmerald(
     routes=[
         Gateway(path="/", handler=homepage),
-        Include(path="/route_list/", routes=my_urls),  # using route list
+        Include(path="/route_list", routes=my_urls),  # using route list
         Include(
-            path="/namespace/", namespace="endpoints.even_more_resource"
+            path="/namespace", namespace="endpoints.even_more_resource"
         ),  # using namespace with default
         Include(path="/childesmerald", app=child_esmerald),
     ]
