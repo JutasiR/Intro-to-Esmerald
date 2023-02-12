@@ -1,4 +1,6 @@
 from esmerald import Esmerald, get, Gateway, Include
+
+from endpoints.add_route_resource import welcome_from_add_route
 from endpoints.childesmerald_resource import child_esmerald
 from endpoints.more_resource import my_urls
 from endpoints.router_resource import my_router
@@ -32,4 +34,5 @@ esmerald_app = Esmerald(
 
 esmerald_app.router.add_route(path="/introduction", handler=introduction)
 esmerald_app.add_route(path="/introduction2", handler=introduction2)
+esmerald_app.add_route(path="/introduction3", handler=welcome_from_add_route)
 esmerald_app.add_router(router=my_router)
