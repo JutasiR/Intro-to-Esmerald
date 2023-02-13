@@ -16,11 +16,6 @@ async def introduction() -> dict:
     return {"message": "I am an Esmerald API!"}
 
 
-@get()
-async def introduction2() -> dict:
-    return {"message": "I am also an Esmerald API!"}
-
-
 esmerald_app = Esmerald(
     routes=[
         Gateway(path="/", handler=homepage),
@@ -33,6 +28,5 @@ esmerald_app = Esmerald(
 )
 
 esmerald_app.router.add_route(path="/introduction", handler=introduction)
-esmerald_app.add_route(path="/introduction2", handler=introduction2)
-esmerald_app.add_route(path="/introduction3", handler=welcome_from_add_route)
+esmerald_app.add_route(path="/introduction2", handler=welcome_from_add_route)
 esmerald_app.add_router(router=my_router)
