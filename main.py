@@ -27,6 +27,6 @@ esmerald_app = Esmerald(
     ]
 )
 
-esmerald_app.router.add_route(path="/introduction", handler=introduction)
-esmerald_app.add_route(path="/introduction2", handler=welcome_from_add_route)
+esmerald_app.router.add_route(path="/add_route", handler=introduction)
+esmerald_app.add_route(path="/add_route2", handler=welcome_from_add_route)
 esmerald_app.add_router(router=my_router)
